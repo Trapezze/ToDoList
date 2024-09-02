@@ -1,25 +1,24 @@
-#To-Do-list 
-tasks = []
+tasks = []  # Список задач
 
-def add_task(task):
+def add_task(task):  # Функция для добавления задачи в список
     tasks.append(task)
 
-def remove_task(task):
+def remove_task(task):  # Функция для удаления задачи из списка
     if task in tasks:
         tasks.remove(task)
     else:
         print("Задачи не найдено.")
 
-def show_tasks():
+def show_tasks():  # Функция для отображения списка задач
     if tasks:
-        for index, task in enumerate(tasks, 1):
-            print(f"{index}. {task}")
+        for index, task in enumerate(tasks, 1):  # Перебираем задачи, нумеруя их
+            print(f"{index}. {task}")  # Выводим номер и название задачи
     else:
-        print("Список задач пуст.")
+        print("Список задач пуст.")  # Выводим сообщение об отсутствии задач
 
 # Пример использования функций
-add_task("Сходить в магазин")
-add_task("Погулять с собакой")
-show_tasks()
-remove_task("Погулять с собакой")
-show_tasks()
+add_task("Сходить в магазин")  # Добавляем задачу "Сходить в магазин"
+add_task("Погулять с собакой")  # Добавляем задачу "Погулять с собакой"
+show_tasks()  # Отображаем список задач
+remove_task("Погулять с собакой")  # Удаляем задачу "Погулять с собакой"
+show_tasks()  # Отображаем обновленный список задач
